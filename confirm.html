@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Google Search</title>
+    <style>
+        :root {
+            /* Light theme variables */
+            --background-color: #f0f0f0;
+            --container-background: white;
+            --text-color: #333;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --proceed-color: #4285f4;
+            --proceed-hover: #3367d6;
+            --alternative-color: #34a853;
+            --alternative-hover: #2d8a46;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark theme variables */
+                --background-color: #1a1a1a;
+                --container-background: #2d2d2d;
+                --text-color: #e0e0e0;
+                --shadow-color: rgba(0, 0, 0, 0.3);
+                --proceed-color: #5c95f5;
+                --proceed-hover: #4285f4;
+                --alternative-color: #3ebb60;
+                --alternative-hover: #34a853;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            background: var(--container-background);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--shadow-color);
+            text-align: center;
+            max-width: 500px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        h1 {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .proceed {
+            background-color: var(--proceed-color);
+            color: white;
+        }
+
+        .proceed:hover {
+            background-color: var(--proceed-hover);
+        }
+
+        .alternative {
+            background-color: var(--alternative-color);
+            color: white;
+        }
+
+        .alternative:hover {
+            background-color: var(--alternative-hover);
+        }
+
+        button:focus {
+            outline: 2px solid var(--text-color);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .container {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="icons/icon.png" alt="Extension Icon" width="64" height="64">
+        <h1>Are you sure this research requires Google?</h1>
+        <div class="buttons">
+            <button class="proceed" id="proceed">Yes, continue to Google</button>
+            <button class="alternative" id="alternative">Use alternative instead</button>
+        </div>
+    </div>
+    <script src="confirm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+{
+    "manifest_version": 2,
+    "name": "Google Search Habit Killer",
+    "version": "0.0.1-dev",
+    "description": "Helps break the habit of automatically going to Google search",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "*://*.google.com/*",
+        "*://*.google.co.uk/*",
+        "*://*.google.ca/*",
+        "*://*.google.fr/*",
+        "*://*.google.de/*",
+        "*://*.google.es/*",
+        "*://*.google.it/*",
+        "*://*.google.nl/*",
+        "*://*.google.ru/*",
+        "*://*.google.co.in/*",
+        "*://*.google.co.jp/*",
+        "*://*.google.cn/*",
+        "*://*.google.com.au/*",
+        "*://*.google.com.br/*",
+        "*://*.google.com.ar/*",
+        "*://*.google.com.mx/*",
+        "*://*.google.com.sg/*",
+        "*://*.google.com.hk/*",
+        "*://*.google.com.tw/*",
+        "*://*.google.com.vn/*",
+        "*://*.google.com.my/*",
+        "*://*.google.co.za/*",
+        "*://*.google.co.kr/*",
+        "*://*.google.co.id/*",
+        "*://*.google.com.tr/*",
+        "*://*.google.com.eg/*",
+        "*://*.google.com.sa/*",
+        "*://*.google.com.pk/*",
+        "*://*.google.gr/*",
+        "*://*.google.se/*",
+        "*://*.google.no/*",
+        "*://*.google.dk/*",
+        "*://*.google.fi/*",
+        "*://*.google.pt/*",
+        "*://*.google.ie/*",
+        "*://*.google.pl/*",
+        "*://*.google.hu/*",
+        "*://*.google.sk/*",
+        "*://*.google.cz/*",
+        "*://*.google.at/*",
+        "*://*.google.be/*",
+        "*://*.google.ch/*",
+        "*://*.google.nz/*",
+        "*://*.google.cl/*",
+        "*://*.google.co.th/*",
+        "*://*.google.lk/*",
+        "*://*.google.co.ke/*",
+        "*://*.google.co.ug/*",
+        "*://*.google.co.tz/*",
+        "*://*.google.com.ph/*",
+        "*://*.google.co.zw/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "author": "ElysaSrc",
+    "homepage_url": "https://github.com/ElysaSrc/ungoogle-habbit",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "96": "icons/icon96.png",
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "96": "icons/icon96.png"
+        }
+    },
+    "web_accessible_resources": [
+        "confirm.html"
+    ],
+    "options_ui": {
+        "page": "settings.html",
+        "browser_style": true
+    }
+}
